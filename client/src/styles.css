@@ -22,6 +22,8 @@
   --md-green-500: #2fb39a;
   --md-green-600: #1a8f7c;
   --md-green-700: #0f6b5c;
+  --md-forest:    #163322;
+  --md-forest-mid:#1e4a30;
 
   --md-white:    #ffffff;
   --md-paper:    #f6fbfb;
@@ -66,7 +68,6 @@ a:hover { color: var(--md-green-600); }
 
 ::selection { background: var(--md-blue-200); color: var(--md-blue-900); }
 
-/* ---------- Typography primitives ---------- */
 .serif {
   font-family: var(--font-display);
   font-weight: 500;
@@ -111,7 +112,6 @@ p:last-child { margin-bottom: 0; }
   background: var(--md-green-500);
 }
 
-/* ---------- Layout ---------- */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -121,7 +121,6 @@ p:last-child { margin-bottom: 0; }
 
 section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 
-/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -167,7 +166,6 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 }
 .btn-arrow:hover::after { transform: translateX(4px); }
 
-/* ---------- Navbar ---------- */
 .nav {
   position: sticky;
   top: 0;
@@ -466,7 +464,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 /* ---------- Process ---------- */
 .process {
   background:
-    linear-gradient(180deg, var(--md-blue-50) 0%, var(--md-paper) 100%);
+    linear-gradient(180deg, var(--md-green-50) 0%, var(--md-paper) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -542,7 +540,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
   border-radius: var(--radius-lg);
   background:
     radial-gradient(600px 240px at 100% 100%, rgba(255,255,255,0.18), transparent 70%),
-    linear-gradient(120deg, var(--md-blue-600), var(--md-green-600));
+    linear-gradient(120deg, var(--md-blue-600), var(--md-forest-mid));
   color: var(--md-white);
   display: flex;
   justify-content: space-between;
@@ -666,7 +664,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 
 /* ---------- Footer ---------- */
 footer {
-  background: var(--md-blue-900);
+  background: var(--md-forest);
   color: rgba(255,255,255,0.78);
   padding: 70px 0 32px;
   position: relative;
@@ -677,7 +675,7 @@ footer::before {
   position: absolute;
   inset: -50% -10% auto auto;
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(47, 179, 154, 0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(47, 179, 154, 0.22), transparent 70%);
   pointer-events: none;
 }
 .footer-grid {
