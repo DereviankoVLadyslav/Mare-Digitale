@@ -1,21 +1,22 @@
 /* =========================================================
    Mare Digitale — Design System
-   Palette: light blue, green, white
+   Palette: forest green primary, teal accent, white
    Type:    Fraunces (display) + Inter Tight (UI/body)
    ========================================================= */
 
 :root {
-  /* Brand */
-  --md-blue-50:  #eef9fb;
-  --md-blue-100: #d6f0f4;
-  --md-blue-200: #a9dfe8;
-  --md-blue-300: #6fc7d6;
-  --md-blue-400: #3fb6c9;
-  --md-blue-500: #1a9bb2;
-  --md-blue-600: #0a7a8a;
-  --md-blue-700: #07596a;
-  --md-blue-900: #07303b;
+  /* Brand — Forest Green primary scale */
+  --md-blue-50:  #edf7f1;
+  --md-blue-100: #cce8d8;
+  --md-blue-200: #96cfb1;
+  --md-blue-300: #5aad85;
+  --md-blue-400: #38895f;
+  --md-blue-500: #286e4b;
+  --md-blue-600: #1e5438;
+  --md-blue-700: #163322;
+  --md-blue-900: #0d1f15;
 
+  /* Teal accent (highlights, kicker lines, hover underlines) */
   --md-green-50:  #ecfaf3;
   --md-green-100: #cdf2df;
   --md-green-300: #74dab0;
@@ -26,10 +27,10 @@
   --md-forest-mid:#1e4a30;
 
   --md-white:    #ffffff;
-  --md-paper:    #f6fbfb;
-  --md-ink:      #0c2935;
-  --md-ink-soft: #3c5b68;
-  --md-rule:     #d8eef0;
+  --md-paper:    #f4faf6;
+  --md-ink:      #0d2018;
+  --md-ink-soft: #3a5a48;
+  --md-rule:     #d4ead8;
 
   /* Type */
   --font-display: 'Fraunces', 'Times New Roman', serif;
@@ -41,8 +42,8 @@
   --radius-lg: 22px;
   --radius-md: 14px;
   --radius-sm: 10px;
-  --shadow-soft: 0 24px 50px -28px rgba(7, 89, 106, 0.35);
-  --shadow-card: 0 20px 40px -28px rgba(7, 89, 106, 0.45);
+  --shadow-soft: 0 24px 50px -28px rgba(13, 31, 21, 0.32);
+  --shadow-card: 0 20px 40px -28px rgba(13, 31, 21, 0.42);
 }
 
 * { box-sizing: border-box; }
@@ -142,7 +143,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 .btn-primary {
   background: var(--md-blue-600);
   color: var(--md-white);
-  box-shadow: 0 14px 28px -14px rgba(10, 122, 138, 0.55);
+  box-shadow: 0 14px 28px -14px rgba(22, 51, 34, 0.5);
 }
 .btn-primary:hover { background: var(--md-blue-700); color: var(--md-white); }
 
@@ -170,7 +171,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(246, 251, 251, 0.78);
+  background: rgba(244, 250, 246, 0.78);
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   border-bottom: 1px solid transparent;
@@ -201,7 +202,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
   background: linear-gradient(135deg, var(--md-blue-400), var(--md-green-500));
   display: grid; place-items: center;
   color: white;
-  box-shadow: 0 6px 18px -8px rgba(10, 122, 138, 0.6);
+  box-shadow: 0 6px 18px -8px rgba(22, 51, 34, 0.55);
 }
 
 .nav-links {
@@ -253,7 +254,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 .lang-switch button.active {
   background: var(--md-white);
   color: var(--md-blue-900);
-  box-shadow: 0 4px 10px -6px rgba(7, 89, 106, 0.4);
+  box-shadow: 0 4px 10px -6px rgba(13, 31, 21, 0.35);
 }
 
 .nav-toggle {
@@ -294,8 +295,8 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
   padding-top: clamp(60px, 7vw, 100px);
   padding-bottom: clamp(60px, 7vw, 110px);
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(63, 182, 201, 0.18), transparent 60%),
-    radial-gradient(800px 500px at -10% 110%, rgba(47, 179, 154, 0.18), transparent 60%),
+    radial-gradient(1200px 600px at 80% -10%, rgba(30, 84, 56, 0.14), transparent 60%),
+    radial-gradient(800px 500px at -10% 110%, rgba(47, 179, 154, 0.15), transparent 60%),
     var(--md-paper);
 }
 .hero-grid {
@@ -428,7 +429,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(400px 200px at 80% -20%, rgba(63, 182, 201, 0.14), transparent 60%);
+  background: radial-gradient(400px 200px at 80% -20%, rgba(47, 179, 154, 0.14), transparent 60%);
   opacity: 0;
   transition: opacity 0.22s ease;
   pointer-events: none;
@@ -555,7 +556,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
 /* ---------- Contact ---------- */
 .contact {
   background:
-    radial-gradient(900px 500px at 0% 0%, rgba(63, 182, 201, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 0% 0%, rgba(30, 84, 56, 0.1), transparent 60%),
     var(--md-paper);
 }
 .contact-grid {
@@ -623,7 +624,7 @@ section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
   outline: none;
   border-color: var(--md-blue-500);
   background: var(--md-white);
-  box-shadow: 0 0 0 4px rgba(63, 182, 201, 0.18);
+  box-shadow: 0 0 0 4px rgba(47, 179, 154, 0.22);
 }
 .field textarea { min-height: 130px; resize: vertical; }
 
