@@ -27,21 +27,25 @@ export default function Hero({ t }) {
           </Reveal>
         </div>
 
-        <Reveal delay={120} className="hero-art">
-          <HeroArt />
-          <div className="badge b1">
-            <span className="num">+148%</span>
-            <span>ROAS<br />avg. lift</span>
-          </div>
-          <div className="badge b2">
-            <span className="num">3.4×</span>
-            <span>Organic<br />traffic</span>
-          </div>
-          <div className="badge b3">
-            <span className="num">28</span>
-            <span>Active<br />retainers</span>
-          </div>
-        </Reveal>
+        <div className="hero-right">
+          <Reveal delay={120} className="hero-art">
+            <HeroArt />
+          </Reveal>
+          <Reveal delay={220} className="hero-stats">
+            <div className="hero-stat">
+              <span className="hero-stat-num">+148%</span>
+              <span className="hero-stat-label">avg. ROAS lift</span>
+            </div>
+            <div className="hero-stat">
+              <span className="hero-stat-num">3.4×</span>
+              <span className="hero-stat-label">organic traffic</span>
+            </div>
+            <div className="hero-stat">
+              <span className="hero-stat-num">28</span>
+              <span className="hero-stat-label">active retainers</span>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export default function Navbar({ t, lang, setLang }) {
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''} ${open ? 'open' : ''}`}>
       <div className="container nav-inner">
-        <a href="#top" className="logo" onClick={close}>
+        <a href="/" className="logo" onClick={close}>
           <span className="logo-mark" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M2 16 Q 7 10, 12 16 T 22 16" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
@@ -28,11 +28,16 @@ export default function Navbar({ t, lang, setLang }) {
 
         <nav>
           <ul className="nav-links">
-            <li><a href="#top" onClick={close}>{t.nav.home}</a></li>
-            <li><a href="#services" onClick={close}>{t.nav.services}</a></li>
-            <li><a href="#process" onClick={close}>{t.nav.process}</a></li>
-            <li><a href="#about" onClick={close}>{t.nav.about}</a></li>
-            <li><a href="#contact" onClick={close}>{t.nav.contact}</a></li>
+            <li><a href="/#top" onClick={close}>{t.nav.home}</a></li>
+            <li><a href="/#services" onClick={close}>{t.nav.services}</a></li>
+            <li><a href="/#process" onClick={close}>{t.nav.process}</a></li>
+            <li><a href="/#about" onClick={close}>{t.nav.about}</a></li>
+            <li><a href="/#contact" onClick={close}>{t.nav.contact}</a></li>
+            <li className="nav-cta-mobile">
+              <a href="/#contact" className="btn btn-primary btn-arrow" onClick={close}>
+                {t.nav.cta}
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -49,7 +54,7 @@ export default function Navbar({ t, lang, setLang }) {
               aria-pressed={lang === 'pl'}
             >PL</button>
           </div>
-          <a href="#contact" className="btn btn-primary btn-arrow" onClick={close}>
+          <a href="/#contact" className="btn btn-primary btn-arrow" onClick={close}>
             {t.nav.cta}
           </a>
           <button
