@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { servicePages, serviceMeta } from '../data/services.js';
+import SEO from '../components/SEO.jsx';
 
 const CheckIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -25,8 +26,15 @@ export default function ServicePage({ lang, t }) {
   const others = meta.filter(m => m.slug !== slug);
   const ctaHref = lang === 'pl' ? '/#kontakt' : '/#contact';
 
+  const currentMeta = meta.find(m => m.slug === slug);
+
   return (
     <div className="sp-wrap">
+      <SEO
+        title={currentMeta?.title ?? page.hero.title}
+        description={currentMeta?.short ?? page.hero.subtitle}
+        path={`/services/${slug}`}
+      />
 
       {/* ── Hero ── */}
       <section className="sp-hero" style={{ '--sp-color': page.color }}>

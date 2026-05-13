@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer({ t }) {
   return (
     <footer>
       <div className="container footer-grid">
         <div>
-          <a href="#top" className="logo">
+          <Link to="/" className="logo">
             <span className="logo-mark" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <path d="M2 16 Q 7 10, 12 16 T 22 16" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
@@ -11,17 +13,17 @@ export default function Footer({ t }) {
               </svg>
             </span>
             Mare Digitale
-          </a>
+          </Link>
           <p style={{ marginTop: 18 }}>{t.footer.tagline}</p>
         </div>
 
         <div>
           <h4>{t.footer.navTitle}</h4>
           <ul>
-            <li><a href="/#about">{t.nav.about}</a></li>
-            <li><a href="/#services">{t.nav.services}</a></li>
-            <li><a href="/#process">{t.nav.process}</a></li>
-            <li><a href="/#contact">{t.nav.contact}</a></li>
+            <li><Link to="/#about">{t.nav.about}</Link></li>
+            <li><Link to="/#services">{t.nav.services}</Link></li>
+            <li><Link to="/#process">{t.nav.process}</Link></li>
+            <li><Link to="/#contact">{t.nav.contact}</Link></li>
           </ul>
         </div>
 

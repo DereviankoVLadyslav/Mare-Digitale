@@ -10,7 +10,8 @@ export const translations = {
     },
     hero: {
       eyebrow: 'Marketing agency · Est. 2025',
-      title: 'Marketing that moves the tide.',
+      title: 'Marketing that moves',
+      titleAccent: 'the tide.',
       subtitle:
         'Mare Digitale helps ambitious brands grow through measurable strategy, performance advertising, and content that earns attention.',
       ctaPrimary: 'See what we do',
@@ -140,7 +141,8 @@ export const translations = {
     },
     hero: {
       eyebrow: 'Agencja marketingowa · od 2025',
-      title: 'Marketing, który porusza fale.',
+      title: 'Marketing, który porusza',
+      titleAccent: 'fale.',
       subtitle:
         'Mare Digitale pomaga ambitnym markom rosnąć dzięki mierzalnej strategii, performance marketingowi i treściom, które naprawdę przyciągają uwagę.',
       ctaPrimary: 'Zobacz, co robimy',

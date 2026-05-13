@@ -12,8 +12,8 @@ export default function Hero({ t }) {
           </Reveal>
           <Reveal delay={80}>
             <h1>
-              {t.hero.title.split(' ').slice(0, -2).join(' ')}{' '}
-              <span className="accent">{t.hero.title.split(' ').slice(-2).join(' ')}</span>
+              {t.hero.title}{' '}
+              <span className="accent">{t.hero.titleAccent}</span>
             </h1>
           </Reveal>
           <Reveal delay={160}>

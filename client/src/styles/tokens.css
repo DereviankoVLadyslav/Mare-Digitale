@@ -1,0 +1,50 @@
+/* =========================================================
+   Mare Digitale — Design Tokens
+   ========================================================= */
+
+:root {
+  /* Brand — Forest Green primary scale */
+  --md-blue-50:  #edf7f1;
+  --md-blue-100: #cce8d8;
+  --md-blue-200: #96cfb1;
+  --md-blue-300: #5aad85;
+  --md-blue-400: #38895f;
+  --md-blue-500: #286e4b;
+  --md-blue-600: #1e5438;
+  --md-blue-700: #163322;
+  --md-blue-900: #0d1f15;
+
+  /* Teal accent */
+  --md-green-50:  #ecfaf3;
+  --md-green-100: #cdf2df;
+  --md-green-300: #74dab0;
+  --md-green-500: #2fb39a;
+  --md-green-600: #1a8f7c;
+  --md-green-700: #0f6b5c;
+  --md-forest:    #163322;
+  --md-forest-mid:#1e4a30;
+
+  --md-white:    #ffffff;
+  --md-paper:    #f4faf6;
+  --md-ink:      #0d2018;
+  --md-ink-soft: #3a5a48;
+  --md-rule:     #d4ead8;
+
+  /* Typography */
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-body:    'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --container: 1240px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 24px 50px -28px rgba(13, 31, 21, 0.32);
+  --shadow-card: 0 20px 40px -28px rgba(13, 31, 21, 0.42);
+}
+
+/* Container scaling for large & ultra-wide screens */
+@media (min-width: 1920px) { :root { --container: 1520px; } }
+@media (min-width: 2560px) { :root { --container: 1900px; } }
+@media (min-width: 3200px) { :root { --container: 2300px; } }

@@ -1,5 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from './components/SEO.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './sections/Hero.jsx';
 import StatsTicker from './components/StatsTicker.jsx';
@@ -9,8 +11,10 @@ import Process from './sections/Process.jsx';
 import About from './sections/About.jsx';
 import Contact from './sections/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import ServicePage from './pages/ServicePage.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 import { translations } from './i18n/translations.js';
+
+const ServicePage = lazy(() => import('./pages/ServicePage.jsx'));
 
 const STORAGE_KEY = 'md-lang';
 
@@ -47,6 +51,9 @@ function AppShell() {
         <Routes>
           <Route path="/" element={
             <>
+              <SEO
+                description="Mare Digitale — marketing agency specialising in analytics & strategy, social media & ads, and SEO & content. Based in Kraków, serving EU clients."
+              />
               <Hero t={t} />
               <StatsTicker />
               <Intro t={t} />
@@ -57,7 +64,11 @@ function AppShell() {
             </>
           } />
           <Route path="/services/:slug" element={
-            <ServicePage lang={lang} t={t} />
+            <ErrorBoundary>
+              <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
+                <ServicePage lang={lang} t={t} />
+              </Suspense>
+            </ErrorBoundary>
           } />
         </Routes>
       </main>
@@ -68,8 +79,10 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <AppShell />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <AppShell />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
