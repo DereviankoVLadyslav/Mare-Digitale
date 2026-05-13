@@ -115,6 +115,47 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       html,
     });
 
+    // Auto-reply to the sender
+    const replyText = [
+      `Hi ${name},`,
+      '',
+      'Thank you for reaching out to Mare Digitale.',
+      'We have received your message and our team is already looking into it.',
+      'We will get back to you within 1 business day.',
+      '',
+      'Best regards,',
+      'Mare Digitale Team',
+      'office@maredigitale.com',
+      '+48 792 487 265',
+    ].join('\n');
+
+    const replyHtml = `
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0d2018;max-width:560px;">
+        <div style="background:#163322;padding:28px 32px;border-radius:12px 12px 0 0;">
+          <span style="color:#ffffff;font-size:1.15rem;font-weight:600;letter-spacing:-0.01em;">Mare Digitale</span>
+        </div>
+        <div style="padding:32px;border:1px solid #d4ead8;border-top:none;border-radius:0 0 12px 12px;">
+          <p style="margin:0 0 16px;">Hi <strong>${escapeHtml(name)}</strong>,</p>
+          <p style="margin:0 0 16px;">Thank you for reaching out to Mare Digitale.</p>
+          <p style="margin:0 0 16px;">We have received your message and our team is already looking into it. We will get back to you within <strong>1 business day</strong>.</p>
+          <p style="margin:0 0 32px;">In the meantime, feel free to reply to this email if you have any additional details to share.</p>
+          <p style="margin:0;color:#3a5a48;font-size:0.9rem;">
+            Best regards,<br/>
+            <strong style="color:#0d2018;">Mare Digitale Team</strong><br/>
+            <a href="mailto:office@maredigitale.com" style="color:#1e5438;">office@maredigitale.com</a> · +48 792 487 265
+          </p>
+        </div>
+      </div>
+    `;
+
+    await transporter.sendMail({
+      from: process.env.MAIL_FROM,
+      to: email,
+      subject: 'We received your message — Mare Digitale',
+      text: replyText,
+      html: replyHtml,
+    });
+
     res.json({ ok: true });
   } catch (err) {
     console.error('[contact] error:', err);
