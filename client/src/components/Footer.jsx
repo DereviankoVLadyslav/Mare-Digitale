@@ -18,10 +18,10 @@ export default function Footer({ t }) {
         <div>
           <h4>{t.footer.navTitle}</h4>
           <ul>
-            <li><a href="#about">{t.nav.about}</a></li>
-            <li><a href="#services">{t.nav.services}</a></li>
-            <li><a href="#process">{t.nav.process}</a></li>
-            <li><a href="#contact">{t.nav.contact}</a></li>
+            <li><a href="/#about">{t.nav.about}</a></li>
+            <li><a href="/#services">{t.nav.services}</a></li>
+            <li><a href="/#process">{t.nav.process}</a></li>
+            <li><a href="/#contact">{t.nav.contact}</a></li>
           </ul>
         </div>
 
@@ -29,7 +29,7 @@ export default function Footer({ t }) {
           <h4>{t.footer.contactTitle}</h4>
           <ul>
             <li><a href="mailto:office@maredigitale.com">office@maredigitale.com</a></li>
-            <li><a href="tel:+48000000000">+48 000 000 000</a></li>
+            <li><a href="tel:+48792487265">+48 792 487 265</a></li>
           </ul>
         </div>
       </div>

@@ -57,7 +57,7 @@ export default function Contact({ t }) {
             </div>
             <div className="info-item">
               <h4>{t.contact.phoneLabel}</h4>
-              <p><a href="tel:+48000000000">+48 000 000 000</a></p>
+              <p><a href="tel:+48792487265">+48 792 487 265</a></p>
             </div>
             <div className="info-item">
               <h4>{t.contact.emailLabel}</h4>

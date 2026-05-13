@@ -3,7 +3,7 @@ const ITEMS = [
   { num: '3.4×',       label: 'organic traffic growth' },
   { num: '28',         label: 'active retainers' },
   { num: '100%',       label: 'senior specialists' },
-  { num: 'Est. 2021',  label: 'Warsaw, Poland' },
+  { num: 'Est. 2025',  label: 'Kraków, Poland' },
   { num: '30 days',    label: 'exit notice' },
   { num: 'Full-funnel',label: 'campaign management' },
   { num: '4 platforms',label: 'Meta · Google · TikTok · LinkedIn' },

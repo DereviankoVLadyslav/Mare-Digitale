@@ -9,7 +9,7 @@ export const translations = {
       cta: 'Request a quote',
     },
     hero: {
-      eyebrow: 'Marketing agency · Est. 2021',
+      eyebrow: 'Marketing agency · Est. 2025',
       title: 'Marketing that moves the tide.',
       subtitle:
         'Mare Digitale helps ambitious brands grow through measurable strategy, performance advertising, and content that earns attention.',
@@ -103,7 +103,7 @@ export const translations = {
       body:
         'Send us a brief — even a rough one. We reply within one business day with honest feedback on whether we are the right partner and what an engagement could look like.',
       addressLabel: 'Address',
-      address: 'Mare Digitale sp. z o. o.\nWarsaw, Poland',
+      address: 'Mare Digitale sp. z o. o.\nul. Cegielniana 4A/10\n30-404 Kraków, Poland',
       phoneLabel: 'Phone',
       emailLabel: 'Email',
       form: {
@@ -139,7 +139,7 @@ export const translations = {
       cta: 'Wyceń projekt',
     },
     hero: {
-      eyebrow: 'Agencja marketingowa · od 2021',
+      eyebrow: 'Agencja marketingowa · od 2025',
       title: 'Marketing, który porusza fale.',
       subtitle:
         'Mare Digitale pomaga ambitnym markom rosnąć dzięki mierzalnej strategii, performance marketingowi i treściom, które naprawdę przyciągają uwagę.',
@@ -233,7 +233,7 @@ export const translations = {
       body:
         'Wyślij nam brief — nawet zgrubny. Odpowiadamy w jeden dzień roboczy szczerą opinią, czy jesteśmy dla Ciebie odpowiednim partnerem i jak mogłaby wyglądać współpraca.',
       addressLabel: 'Adres',
-      address: 'Mare Digitale sp. z o. o.\nWarszawa, Polska',
+      address: 'Mare Digitale sp. z o. o.\nul. Cegielniana 4A/10\n30-404 Kraków, Polska',
       phoneLabel: 'Telefon',
       emailLabel: 'E-mail',
       form: {
