@@ -83,6 +83,86 @@
 .service-card:hover .service-link::after { transform: translateX(4px); }
 @media (max-width: 480px) { .service-card { padding: 26px 22px 22px; } }
 
+/* Why us */
+.whyus {
+  background: var(--md-white);
+  border-top: 1px solid var(--md-rule);
+}
+.whyus .section-head { margin-bottom: 52px; }
+.whyus .section-head h2 { margin: 12px 0 0; max-width: 640px; }
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1000px) { .whyus-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .whyus-grid { grid-template-columns: 1fr; } }
+
+.whyus-card {
+  background: var(--md-paper);
+  border: 1px solid var(--md-rule);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+.whyus-icon {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--md-blue-100);
+  color: var(--md-blue-600);
+  margin-bottom: 18px;
+}
+.whyus-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--md-blue-900);
+  margin: 0 0 8px;
+}
+.whyus-card p {
+  font-size: 0.92rem;
+  color: var(--md-ink-soft);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq {
+  background: var(--md-paper);
+  border-top: 1px solid var(--md-rule);
+}
+.faq-head {
+  max-width: 640px;
+  margin-bottom: 52px;
+}
+.faq-head h2 { margin: 12px 0 0; }
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 56px;
+}
+@media (max-width: 820px) { .faq-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+.faq-item {
+  padding-top: 24px;
+  border-top: 1px solid var(--md-rule);
+}
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--md-blue-900);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--md-ink-soft);
+  margin: 0;
+  line-height: 1.65;
+}
+
 /* Process */
 .process {
   background: linear-gradient(180deg, var(--md-green-50) 0%, var(--md-paper) 100%);

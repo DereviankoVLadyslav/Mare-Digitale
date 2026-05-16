@@ -7,8 +7,10 @@ import Hero from './sections/Hero.jsx';
 import StatsTicker from './components/StatsTicker.jsx';
 import Intro from './sections/Intro.jsx';
 import Services from './sections/Services.jsx';
+import WhyUs from './sections/WhyUs.jsx';
 import Process from './sections/Process.jsx';
 import About from './sections/About.jsx';
+import Faq from './sections/Faq.jsx';
 import Contact from './sections/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
@@ -58,8 +60,10 @@ function AppShell() {
               <StatsTicker />
               <Intro t={t} />
               <Services t={t} />
+              <WhyUs t={t} />
               <Process t={t} />
               <About t={t} />
+              <Faq t={t} />
               <Contact t={t} />
             </>
           } />

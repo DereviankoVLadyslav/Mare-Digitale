@@ -44,6 +44,46 @@ export const translations = {
             'Technical SEO, topic-cluster planning, and editorial production that ranks, gets cited, and converts qualified traffic into pipeline.',
           link: 'See content programmes',
         },
+        {
+          title: 'Email Marketing & CRM',
+          desc:
+            'Lifecycle automation, list segmentation, and campaign management that turns your email list into a revenue channel — without burning subscriber trust.',
+          link: 'See email programmes',
+        },
+        {
+          title: 'Web Design & CRO',
+          desc:
+            'UX audits, conversion-focused landing pages, and structured A/B testing that turn existing traffic into leads without spending more on acquisition.',
+          link: 'See CRO approach',
+        },
+        {
+          title: 'Brand Identity & Creative',
+          desc:
+            'Strategy-led visual identity, messaging architecture, and asset production — so your brand holds across every channel and every format.',
+          link: 'See brand work',
+        },
+      ],
+    },
+    whyus: {
+      kicker: 'Why Mare Digitale',
+      title: 'Different by design, not by claim.',
+      items: [
+        {
+          title: 'No media markups',
+          body: 'You pay exactly what Meta, Google, or TikTok charges. Our fee is a flat retainer — full stop.',
+        },
+        {
+          title: '30-day exit clause',
+          body: 'Every contract includes a 30-day notice period. No lock-ins, no penalty clauses, no awkward conversations.',
+        },
+        {
+          title: 'Senior specialists only',
+          body: 'Every engagement is run by senior strategists, paid-media leads, and editors — not juniors learning on your budget.',
+        },
+        {
+          title: 'One dashboard, always live',
+          body: 'Every client gets a Looker Studio dashboard from day one — shared, updated daily, and yours to keep.',
+        },
       ],
     },
     process: {
@@ -97,6 +137,28 @@ export const translations = {
       ],
       ctaTitle: 'Ready to plan the next quarter?',
       ctaButton: 'Book a consultation',
+    },
+    faq: {
+      kicker: 'Common questions',
+      title: 'What most clients ask before signing.',
+      items: [
+        {
+          q: 'How long does it take to see results?',
+          a: 'Paid media campaigns typically show measurable results within 4–6 weeks. SEO and content programmes compound over 3–12 months. We set realistic timelines at the start of every engagement.',
+        },
+        {
+          q: 'Do you work with businesses outside Poland?',
+          a: 'Yes — around half our clients are based outside Poland, across the EU and English-speaking markets. We work fully remotely, in English and Polish.',
+        },
+        {
+          q: 'What is the minimum engagement size?',
+          a: 'Our retainers start at €2,500/month for single-channel engagements. Multi-channel and strategy programmes are quoted based on scope.',
+        },
+        {
+          q: 'Can we start with a one-off project?',
+          a: 'Yes. We offer project-based engagements for audits, strategy sprints, and brand identity. Most clients move to a retainer after the first project.',
+        },
+      ],
     },
     contact: {
       kicker: 'Get in touch',
@@ -175,6 +237,46 @@ export const translations = {
             'SEO techniczne, planowanie klastrów tematycznych i produkcja redakcyjna, która rankuje, jest cytowana i zamienia ruch w pipeline.',
           link: 'Zobacz programy contentowe',
         },
+        {
+          title: 'E-mail Marketing i CRM',
+          desc:
+            'Automatyzacja cyklu życia, segmentacja listy i zarządzanie kampaniami, które zamieniają listę e-mailową w kanał przychodów bez palenia zaufania subskrybentów.',
+          link: 'Zobacz programy e-mailowe',
+        },
+        {
+          title: 'Web Design i CRO',
+          desc:
+            'Audyty UX, landing pages zorientowane na konwersję i ustrukturyzowane testy A/B, które zamieniają istniejący ruch w leady bez zwiększania wydatków na akwizycję.',
+          link: 'Zobacz podejście CRO',
+        },
+        {
+          title: 'Tożsamość marki i kreacja',
+          desc:
+            'Tożsamość wizualna oparta na strategii, architektura komunikacji i produkcja assetów — żeby Twoja marka była spójna w każdym kanale i formacie.',
+          link: 'Zobacz brand work',
+        },
+      ],
+    },
+    whyus: {
+      kicker: 'Dlaczego Mare Digitale',
+      title: 'Inne podejście, nie inne slajdy.',
+      items: [
+        {
+          title: 'Brak marży na mediach',
+          body: 'Płacisz dokładnie tyle, ile pobiera Meta, Google czy TikTok. Nasze wynagrodzenie to stały retainer — i nic więcej.',
+        },
+        {
+          title: '30-dniowe wypowiedzenie',
+          body: 'Każda umowa ma 30-dniowy termin wypowiedzenia. Bez lock-inów, kar umownych ani niekomfortowych rozmów.',
+        },
+        {
+          title: 'Tylko seniorzy',
+          body: 'Każdą współpracę prowadzą seniorzy — stratedzy, specjaliści paid media i redaktorzy. Bez juniorów uczących się na Twoim budżecie.',
+        },
+        {
+          title: 'Jeden dashboard, zawsze live',
+          body: 'Każdy klient dostaje dashboard Looker Studio od pierwszego dnia — współdzielony, aktualizowany codziennie i Twój na zawsze.',
+        },
       ],
     },
     process: {
@@ -228,6 +330,28 @@ export const translations = {
       ],
       ctaTitle: 'Gotowi zaplanować kolejny kwartał?',
       ctaButton: 'Umów konsultację',
+    },
+    faq: {
+      kicker: 'Często zadawane pytania',
+      title: 'Co klienci pytają przed podpisaniem.',
+      items: [
+        {
+          q: 'Kiedy zobaczę pierwsze wyniki?',
+          a: 'Kampanie paid media zazwyczaj dają mierzalne wyniki w ciągu 4–6 tygodni. SEO i content kompilują się przez 3–12 miesięcy. Realistyczne terminy ustalamy na początku każdej współpracy.',
+        },
+        {
+          q: 'Czy pracujecie z firmami spoza Polski?',
+          a: 'Tak — około połowy naszych klientów jest spoza Polski, z całej UE i rynków anglojęzycznych. Pracujemy w pełni zdalnie, po polsku i po angielsku.',
+        },
+        {
+          q: 'Jaki jest minimalny zakres współpracy?',
+          a: 'Nasze retainery zaczynają się od 2 500 EUR miesięcznie dla projektów jednokanałowych. Wielokanałowe i strategiczne są wyceniane indywidualnie.',
+        },
+        {
+          q: 'Czy można zacząć od jednorazowego projektu?',
+          a: 'Tak. Oferujemy projekty audytowe, sprinty strategiczne i identyfikację wizualną. Większość klientów przechodzi na retainer po pierwszym projekcie.',
+        },
+      ],
     },
     contact: {
       kicker: 'Skontaktuj się',

@@ -36,7 +36,7 @@ export default function ServicePage({ lang, t }) {
         path={`/services/${slug}`}
       />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section className="sp-hero" style={{ '--sp-color': page.color }}>
         <div className="container">
           <Link to="/" className="sp-back">
@@ -51,7 +51,7 @@ export default function ServicePage({ lang, t }) {
         </div>
       </section>
 
-      {/* ── Overview ── */}
+      {/* Overview */}
       <section className="sp-overview">
         <div className="container sp-overview-grid">
           <div className="sp-overview-body">
@@ -70,7 +70,23 @@ export default function ServicePage({ lang, t }) {
         </div>
       </section>
 
-      {/* ── Features ── */}
+      {/* Who it's for */}
+      {page.whoFor && (
+        <section className="sp-whofor">
+          <div className="container">
+            <h2 className="sp-section-title">
+              {lang === 'pl' ? 'Dla kogo' : 'Who this is for'}
+            </h2>
+            <ul className="sp-whofor-list">
+              {page.whoFor.map((item, i) => (
+                <li key={i} className="sp-whofor-item">{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Features */}
       <section className="sp-features">
         <div className="container">
           <h2 className="sp-section-title">{page.features.title}</h2>
@@ -88,7 +104,7 @@ export default function ServicePage({ lang, t }) {
         </div>
       </section>
 
-      {/* ── Approach ── */}
+      {/* Approach */}
       <section className="sp-approach">
         <div className="container">
           <h2 className="sp-section-title">{page.approach.title}</h2>
@@ -104,7 +120,23 @@ export default function ServicePage({ lang, t }) {
         </div>
       </section>
 
-      {/* ── Other services ── */}
+      {/* Tools & platforms */}
+      {page.tools && (
+        <section className="sp-tools">
+          <div className="container">
+            <h2 className="sp-section-title">
+              {lang === 'pl' ? 'Narzędzia i platformy' : 'Tools & platforms'}
+            </h2>
+            <div className="sp-tools-tags">
+              {page.tools.map((tool, i) => (
+                <span key={i} className="sp-tool-tag">{tool}</span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Other services */}
       <section className="sp-others">
         <div className="container">
           <h2 className="sp-section-title">
@@ -121,7 +153,7 @@ export default function ServicePage({ lang, t }) {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <section className="sp-cta-section">
         <div className="container">
           <div className="about-cta">

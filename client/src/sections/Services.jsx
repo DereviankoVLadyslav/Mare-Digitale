@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
 import Reveal from '../components/Reveal.jsx';
 
-const SLUGS = ['analytics-strategy', 'social-media-ads', 'seo-content'];
+const SLUGS = [
+  'analytics-strategy',
+  'social-media-ads',
+  'seo-content',
+  'email-crm',
+  'web-cro',
+  'brand-creative',
+];
 
 const ICONS = [
   (
@@ -19,6 +26,24 @@ const ICONS = [
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="11" cy="11" r="6" /><path d="M20 20l-4.5-4.5" />
       <path d="M9 11h4" /><path d="M11 9v4" />
+    </svg>
+  ),
+  (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="M2 8h20" /><path d="M8 12h8" /><path d="M8 16h5" />
+    </svg>
+  ),
+  (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2" />
+      <path d="M8 21h8" /><path d="M12 17v4" />
+      <path d="M7 10l3 3 4-5" />
+    </svg>
+  ),
+  (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
     </svg>
   ),
 ];

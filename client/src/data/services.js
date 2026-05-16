@@ -2,6 +2,12 @@ export const servicePages = {
   en: {
     'analytics-strategy': {
       color: '#1e5438',
+      whoFor: [
+        "You're scaling spend but can't tell which channel is actually driving revenue.",
+        "Your GA4 is live but you don't trust the numbers your CFO sees in the dashboard.",
+        "You've worked with agencies before and never had a strategy you could defend at a board level.",
+      ],
+      tools: ['GA4', 'Google Tag Manager', 'Looker Studio', 'BigQuery', 'Meta Ads Manager', 'Google Ads'],
       hero: {
         title: 'Data-driven strategy that compounds.',
         subtitle:
@@ -39,6 +45,12 @@ export const servicePages = {
 
     'social-media-ads': {
       color: '#163322',
+      whoFor: [
+        "You're running paid campaigns in-house and ROAS has plateaued for the last two quarters.",
+        "You want to test a new channel but don't have the expertise to structure it properly from day one.",
+        "Your creative is strong but targeting, bidding, and campaign structure are largely guesswork.",
+      ],
+      tools: ['Meta Ads', 'Google Ads', 'TikTok Ads', 'LinkedIn Campaign Manager', 'Triple Whale', 'Northbeam'],
       hero: {
         title: 'Full-funnel paid campaigns across every channel.',
         subtitle:
@@ -76,6 +88,12 @@ export const servicePages = {
 
     'seo-content': {
       color: '#286e4b',
+      whoFor: [
+        "You've been investing in content for over a year and organic traffic still isn't moving.",
+        "Your site has technical issues that have been sitting on the dev backlog for months.",
+        "You want to own a category in search, not just rank for your brand name.",
+      ],
+      tools: ['Ahrefs', 'Screaming Frog', 'Google Search Console', 'Looker Studio', 'Surfer SEO', 'Notion'],
       hero: {
         title: 'Content that ranks, earns citations, and converts.',
         subtitle:
@@ -110,11 +128,146 @@ export const servicePages = {
         ],
       },
     },
+
+    'email-crm': {
+      color: '#1a4b35',
+      whoFor: [
+        "You have a list of thousands but send the same broadcast email to everyone.",
+        "Your welcome flow is a single email and abandoned cart recovery has never been switched on.",
+        "You migrated to a new ESP and your automations didn't make the journey with you.",
+      ],
+      tools: ['Klaviyo', 'HubSpot', 'ActiveCampaign', 'Mailchimp', 'Brevo', 'Postmark'],
+      hero: {
+        title: 'Email that converts without burning your list.',
+        subtitle:
+          'From welcome sequences to lifecycle automation — we build, write, and optimise email programmes that generate revenue at the lowest CAC of any channel.',
+      },
+      overview: {
+        body: 'Email is still the highest-ROI channel in digital marketing — for brands that treat it like one. Most do not. They send batch-and-blast campaigns, ignore segmentation, and wonder why open rates are falling.\n\nWe build email programmes on the foundations that matter: a clean list, a logical CRM structure, and automation flows mapped to real customer behaviour. The result is a channel that works in the background — recovering abandoned carts, re-engaging dormant customers, and turning one-time buyers into repeat revenue.',
+        stats: [
+          { num: '42×', label: 'average ROI — email outperforms every other channel' },
+          { num: '6', label: 'core automation flows built in the first 60 days' },
+          { num: '0%', label: 'batch-and-blast — every send is segmented and triggered' },
+        ],
+      },
+      features: {
+        title: "What's included",
+        items: [
+          { title: 'CRM audit & setup', body: 'List health check, segmentation architecture, and CRM configuration in Klaviyo, HubSpot, or your existing platform.' },
+          { title: 'List segmentation', body: 'RFM-based segments, engagement tiers, and custom properties that let you send the right message to the right contact.' },
+          { title: 'Automation flows', body: 'Welcome series, abandoned cart, post-purchase, win-back, and browse abandonment — built, tested, and live.' },
+          { title: 'Campaign management', body: 'Weekly or monthly campaign sends: strategy, copywriting, design direction, and A/B testing built in.' },
+          { title: 'Deliverability management', body: 'Domain warm-up, sender reputation monitoring, list hygiene, and suppression management.' },
+          { title: 'Revenue reporting', body: 'Monthly report showing revenue attributed to email by flow and campaign, open rates, CTR, and list growth.' },
+        ],
+      },
+      approach: {
+        title: 'How the engagement works',
+        steps: [
+          { num: '01', title: 'List audit', body: 'We audit your current list, CRM structure, and sending history — and identify quick wins before we rebuild anything.' },
+          { num: '02', title: 'Foundation build', body: 'Segmentation architecture, sender domain setup, and the six core automation flows built and tested in 60 days.' },
+          { num: '03', title: 'Campaign cadence', body: 'Regular campaign sends on your agreed schedule — strategy, copy, and design from our team.' },
+          { num: '04', title: 'Monthly review', body: 'A revenue-attributed report every month, with list health metrics and recommendations for the next 30 days.' },
+        ],
+      },
+    },
+
+    'web-cro': {
+      color: '#0f2e1e',
+      whoFor: [
+        "You're driving traffic to your site but conversion rate hasn't budged in six months.",
+        "You redesigned your site last year and conversions actually dropped after launch.",
+        "Your team has strong opinions about the homepage but no data to settle them.",
+      ],
+      tools: ['Hotjar', 'VWO', 'Microsoft Clarity', 'Figma', 'Webflow', 'Google Analytics 4'],
+      hero: {
+        title: 'Websites and landing pages built to convert.',
+        subtitle:
+          'UX audits, conversion-focused design, and A/B testing — so your traffic turns into leads, not bounces.',
+      },
+      overview: {
+        body: 'Most websites are brochures. They look good in a screenshot and convert at 1.2%. We design around a different brief: what does this page need to do, for whom, and what evidence do we have that this design achieves it?\n\nEvery project starts with a conversion audit. We identify the leaks in your current funnel — form friction, unclear value propositions, slow load times, or misaligned CTAs — and then redesign or build around fixes. The result is a site or landing page that earns its traffic.',
+        stats: [
+          { num: '+63%', label: 'average conversion lift after CRO audit and redesign' },
+          { num: 'Evidence-led', label: 'design — every decision tied to data or user research' },
+          { num: '2-week', label: 'sprint to first live A/B test on existing pages' },
+        ],
+      },
+      features: {
+        title: "What's included",
+        items: [
+          { title: 'CRO audit', body: 'Heatmap analysis, session recording review, funnel drop-off analysis, and a prioritised fix list with expected impact.' },
+          { title: 'UX & copy review', body: 'Page-by-page review of information hierarchy, messaging clarity, CTA placement, and form friction.' },
+          { title: 'Landing page design', body: 'Conversion-focused landing pages designed in Figma and developed for your CMS or codebase.' },
+          { title: 'A/B testing programme', body: 'Structured test roadmap, hypothesis documentation, and statistical significance reporting.' },
+          { title: 'Page speed optimisation', body: 'Core Web Vitals improvements, image optimisation, and load-time fixes that protect both UX and SEO.' },
+          { title: 'Ongoing CRO retainer', body: 'Monthly test cycles with a written hypothesis, results report, and updated roadmap of what to test next.' },
+        ],
+      },
+      approach: {
+        title: 'How the engagement works',
+        steps: [
+          { num: '01', title: 'Conversion audit', body: 'We analyse your traffic, heatmaps, and funnel data — and deliver a ranked list of conversion leaks with estimated impact.' },
+          { num: '02', title: 'Design & build', body: 'New pages or redesigned sections delivered in Figma, reviewed with your team, then built and deployed.' },
+          { num: '03', title: 'Test & learn', body: 'A/B tests run on a structured calendar with clear hypotheses, traffic splits, and minimum detectable effects.' },
+          { num: '04', title: 'Scale winners', body: 'Winning variants become the control. Monthly report documents learnings and the next test queue.' },
+        ],
+      },
+    },
+
+    'brand-creative': {
+      color: '#234d3a',
+      whoFor: [
+        "You're growing fast but your brand looks different on every channel and touchpoint.",
+        "You're about to enter a new market and need to know exactly what you stand for.",
+        "Your visual identity was designed in year one and hasn't aged well since.",
+      ],
+      tools: ['Figma', 'Adobe Creative Cloud', 'Notion', 'Framer', 'Canva Pro'],
+      hero: {
+        title: 'Brand identity built to outlast a rebranding cycle.',
+        subtitle:
+          'Strategy-led visual identity, messaging architecture, and creative production — so your brand reads the same whether it is a billboard, a LinkedIn post, or a product label.',
+      },
+      overview: {
+        body: 'Brand is not a logo. It is the set of associations that make someone choose you over a cheaper alternative. Building those associations takes a clear positioning strategy, a visual system that communicates it, and creative production that holds the line across every touchpoint.\n\nWe start with strategy: who you are for, what you stand for, and how that translates into a voice, a visual language, and a message hierarchy. Then we design the system — and produce the assets that put it in market.',
+        stats: [
+          { num: 'Strategy-led', label: 'identity — positioning comes before visual design' },
+          { num: '6-week', label: 'foundation sprint from brief to brand guidelines' },
+          { num: '100%', label: 'of deliverables production-ready for print and digital' },
+        ],
+      },
+      features: {
+        title: "What's included",
+        items: [
+          { title: 'Brand positioning workshop', body: 'A structured session to define your audience, competitive space, value proposition, and brand personality.' },
+          { title: 'Messaging architecture', body: 'Tagline, elevator pitch, key messages, and tone-of-voice guidelines written and tested with your team.' },
+          { title: 'Visual identity system', body: 'Logo suite, colour palette, typography, iconography, and photography direction delivered in a brand guidelines document.' },
+          { title: 'Asset production', body: 'Business cards, social templates, presentation decks, email headers, and ad creative produced to spec.' },
+          { title: 'Brand guidelines', body: 'A living brand guide — digital and PDF — covering every brand element, with usage rules and real-world examples.' },
+          { title: 'Creative direction retainer', body: 'Ongoing creative review and direction to keep your brand consistent as your team grows and channels expand.' },
+        ],
+      },
+      approach: {
+        title: 'How the engagement works',
+        steps: [
+          { num: '01', title: 'Positioning sprint', body: 'A structured brand workshop: competitive landscape, audience, value proposition, personality, and voice — delivered as a written brief.' },
+          { num: '02', title: 'Identity design', body: 'Visual concept exploration, logo design, colour and type system — reviewed in two rounds with your team.' },
+          { num: '03', title: 'Guidelines & assets', body: 'Brand guidelines document produced and all launch assets designed and exported in required formats.' },
+          { num: '04', title: 'Creative direction', body: 'Ongoing monthly review of new creative to keep brand application consistent across channels and formats.' },
+        ],
+      },
+    },
   },
 
   pl: {
     'analytics-strategy': {
       color: '#1e5438',
+      whoFor: [
+        "Skalujesz wydatki, ale nie wiesz, który kanał naprawdę generuje przychód.",
+        "GA4 działa, ale nie ufasz danym, które widzisz w dashboardzie.",
+        "Współpracowałeś z agencjami i nigdy nie miałeś strategii, którą mógłbyś obronić przed zarządem.",
+      ],
+      tools: ['GA4', 'Google Tag Manager', 'Looker Studio', 'BigQuery', 'Meta Ads Manager', 'Google Ads'],
       hero: {
         title: 'Strategia oparta na danych, która się kumuluje.',
         subtitle:
@@ -152,6 +305,12 @@ export const servicePages = {
 
     'social-media-ads': {
       color: '#163322',
+      whoFor: [
+        "Prowadzisz kampanie in-house i ROAS nie ruszył się od dwóch ostatnich kwartałów.",
+        "Chcesz przetestować nowy kanał, ale brakuje Ci ekspertyzy, żeby go dobrze zstrukturyzować od początku.",
+        "Masz mocne kreacje, ale targetowanie, stawki i struktura kampanii to w dużej mierze zgadywanki.",
+      ],
+      tools: ['Meta Ads', 'Google Ads', 'TikTok Ads', 'LinkedIn Campaign Manager', 'Triple Whale', 'Northbeam'],
       hero: {
         title: 'Pełnolejkowe kampanie płatne na każdym kanale.',
         subtitle:
@@ -189,6 +348,12 @@ export const servicePages = {
 
     'seo-content': {
       color: '#286e4b',
+      whoFor: [
+        "Inwestujesz w content od ponad roku i ruch organiczny nadal stoi w miejscu.",
+        "Twoja strona ma problemy techniczne, które od miesięcy czekają na liście zadań.",
+        "Chcesz dominować w swojej kategorii w wyszukiwarce, a nie tylko rankować na branded terms.",
+      ],
+      tools: ['Ahrefs', 'Screaming Frog', 'Google Search Console', 'Looker Studio', 'Surfer SEO', 'Notion'],
       hero: {
         title: 'Content, który rankuje, jest cytowany i konwertuje.',
         subtitle:
@@ -223,18 +388,153 @@ export const servicePages = {
         ],
       },
     },
+
+    'email-crm': {
+      color: '#1a4b35',
+      whoFor: [
+        "Masz listę tysięcy kontaktów, ale wysyłasz tę samą wiadomość broadcastową do wszystkich.",
+        "Twój welcome flow to jeden e-mail, a odzyskiwanie porzuconych koszyków nigdy nie zostało włączone.",
+        "Zmieniłeś ESP i Twoje automatyzacje nie przeniosły się razem z Tobą.",
+      ],
+      tools: ['Klaviyo', 'HubSpot', 'ActiveCampaign', 'Mailchimp', 'Brevo', 'Postmark'],
+      hero: {
+        title: 'E-mail, który konwertuje bez palenia listy.',
+        subtitle:
+          'Od sekwencji powitalnych po automatyzację cyklu życia — budujemy, piszemy i optymalizujemy programy e-mailowe, które generują przychód przy najniższym CAC ze wszystkich kanałów.',
+      },
+      overview: {
+        body: 'E-mail wciąż jest kanałem z najwyższym ROI w marketingu cyfrowym — dla marek, które traktują go poważnie. Większość tego nie robi. Wysyłają masowe kampanie, ignorują segmentację i pytają, dlaczego open rates spadają.\n\nBudujemy programy e-mailowe na fundamentach, które mają znaczenie: czystej liście, logicznej strukturze CRM i przepływach automatyzacji mapowanych na realne zachowania klientów. Efektem jest kanał, który pracuje w tle — odzyskuje porzucone koszyki, reaktywuje uśpionych klientów i zamienia jednorazowych kupujących w stałych.',
+        stats: [
+          { num: '42×', label: 'średni ROI — e-mail bije każdy inny kanał' },
+          { num: '6', label: 'bazowych przepływów automatyzacji w pierwszych 60 dniach' },
+          { num: '0%', label: 'masowych wysyłek — każda wiadomość jest segmentowana' },
+        ],
+      },
+      features: {
+        title: 'Co jest w zakresie',
+        items: [
+          { title: 'Audyt i konfiguracja CRM', body: 'Ocena zdrowia listy, architektura segmentacji i konfiguracja CRM w Klaviyo, HubSpot lub Twojej istniejącej platformie.' },
+          { title: 'Segmentacja listy', body: 'Segmenty oparte na RFM, poziomy zaangażowania i niestandardowe właściwości — właściwa wiadomość do właściwego kontaktu.' },
+          { title: 'Przepływy automatyzacji', body: 'Seria powitalna, porzucony koszyk, po zakupie, win-back i porzucanie przeglądania — zbudowane, przetestowane i live.' },
+          { title: 'Zarządzanie kampaniami', body: 'Cotygodniowe lub miesięczne kampanie: strategia, copywriting, kierunek kreatywny i wbudowane testy A/B.' },
+          { title: 'Zarządzanie dostarczalnością', body: 'Rozgrzewanie domeny, monitorowanie reputacji nadawcy, higiena listy i zarządzanie suppresjami.' },
+          { title: 'Raportowanie przychodów', body: 'Miesięczny raport z przychodami przypisanymi do e-maila wg przepływu i kampanii, open rates, CTR i wzrost listy.' },
+        ],
+      },
+      approach: {
+        title: 'Jak wygląda współpraca',
+        steps: [
+          { num: '01', title: 'Audyt listy', body: 'Analizujemy Twoją obecną listę, strukturę CRM i historię wysyłek — i identyfikujemy quick wins przed przebudową.' },
+          { num: '02', title: 'Budowa fundamentów', body: 'Architektura segmentacji, konfiguracja domeny nadawcy i sześć podstawowych przepływów automatyzacji w 60 dniach.' },
+          { num: '03', title: 'Rytm kampanii', body: 'Regularne kampanie według uzgodnionego harmonogramu — strategia, copy i kreacja od naszego zespołu.' },
+          { num: '04', title: 'Miesięczny review', body: 'Raport z atrybuowanymi przychodami co miesiąc, wskaźniki zdrowia listy i rekomendacje na kolejne 30 dni.' },
+        ],
+      },
+    },
+
+    'web-cro': {
+      color: '#0f2e1e',
+      whoFor: [
+        "Masz ruch na stronie, ale współczynnik konwersji nie ruszył się od sześciu miesięcy.",
+        "Przeprojektowałeś stronę w zeszłym roku i konwersje faktycznie spadły po launchu.",
+        "Twój zespół ma mocne opinie o stronie głównej, ale brakuje danych, żeby je rozstrzygnąć.",
+      ],
+      tools: ['Hotjar', 'VWO', 'Microsoft Clarity', 'Figma', 'Webflow', 'Google Analytics 4'],
+      hero: {
+        title: 'Strony i landing pages zaprojektowane do konwersji.',
+        subtitle:
+          'Audyty UX, projektowanie zorientowane na konwersję i testy A/B — żeby Twój ruch zamieniał się w leady, a nie w odrzucenia.',
+      },
+      overview: {
+        body: 'Większość stron to broszury. Dobrze wyglądają na screenshocie i konwertują na poziomie 1,2%. My projektujemy według innego briefa: co ta strona ma robić, dla kogo i jakie mamy dowody, że ten projekt to osiąga?\n\nKażdy projekt zaczyna się od audytu konwersji. Identyfikujemy przecieki w Twoim lejku — friction w formularzach, niejasne propozycje wartości, wolne ładowanie lub źle dobrane CTA — i przeprojektowujemy wokół poprawek. Efektem jest strona lub landing page, który zasługuje na ruch.',
+        stats: [
+          { num: '+63%', label: 'średni wzrost konwersji po audycie CRO i redesignie' },
+          { num: 'Evidence-led', label: 'design — każda decyzja oparta na danych lub badaniach' },
+          { num: '2 tygodnie', label: 'do pierwszego testu A/B live na istniejących stronach' },
+        ],
+      },
+      features: {
+        title: 'Co jest w zakresie',
+        items: [
+          { title: 'Audyt CRO', body: 'Analiza heatmap, nagrania sesji, analiza drop-off w lejku i priorytetowa lista poprawek z szacowanym wpływem.' },
+          { title: 'Przegląd UX i copy', body: 'Strona po stronie: hierarchia informacji, jasność komunikacji, rozmieszczenie CTA i friction w formularzach.' },
+          { title: 'Projektowanie landing pages', body: 'Landing pages zorientowane na konwersję, projektowane w Figma i wdrażane dla Twojego CMS lub codebase.' },
+          { title: 'Program testów A/B', body: 'Ustrukturyzowany roadmap testów, dokumentacja hipotez i raportowanie istotności statystycznej.' },
+          { title: 'Optymalizacja szybkości strony', body: 'Poprawa Core Web Vitals, optymalizacja obrazów i poprawki czasu ładowania chroniące UX i SEO.' },
+          { title: 'Retainer CRO', body: 'Miesięczne cykle testów z pisemną hipotezą, raportem wyników i zaktualizowanym roadmapem kolejnych testów.' },
+        ],
+      },
+      approach: {
+        title: 'Jak wygląda współpraca',
+        steps: [
+          { num: '01', title: 'Audyt konwersji', body: 'Analizujemy ruch, heatmapy i dane lejka — i dostarczamy uszeregowaną listę przecieków konwersji z szacowanym wpływem.' },
+          { num: '02', title: 'Projekt i build', body: 'Nowe strony lub przeprojektowane sekcje dostarczone w Figma, zrecenzowane z Twoim zespołem, a następnie zbudowane i wdrożone.' },
+          { num: '03', title: 'Testowanie i nauka', body: 'Testy A/B według ustrukturyzowanego kalendarza z jasnymi hipotezami, podziałem ruchu i minimalnymi wykrywalnymi efektami.' },
+          { num: '04', title: 'Skalowanie zwycięzców', body: 'Wygrywające warianty stają się kontrolą. Miesięczny raport dokumentuje wnioski i kolejkę następnych testów.' },
+        ],
+      },
+    },
+
+    'brand-creative': {
+      color: '#234d3a',
+      whoFor: [
+        "Szybko rośniesz, ale Twoja marka wygląda inaczej na każdym kanale i touchpoincie.",
+        "Wchodzisz na nowy rynek i potrzebujesz dokładnie wiedzieć, za czym stoisz.",
+        "Tożsamość wizualna powstała w pierwszym roku firmy i nie przetrwała próby czasu.",
+      ],
+      tools: ['Figma', 'Adobe Creative Cloud', 'Notion', 'Framer', 'Canva Pro'],
+      hero: {
+        title: 'Tożsamość marki zbudowana, by przetrwać rebrandingi.',
+        subtitle:
+          'Tożsamość wizualna oparta na strategii, architektura komunikacji i produkcja kreatywna — żeby Twoja marka wyglądała spójnie na billboardzie, poście na LinkedIn i etykiecie produktu.',
+      },
+      overview: {
+        body: 'Marka to nie logo. To zbiór skojarzeń, które sprawiają, że ktoś wybiera Ciebie zamiast tańszej alternatywy. Budowanie tych skojarzeń wymaga jasnej strategii pozycjonowania, systemu wizualnego, który ją komunikuje, i produkcji kreatywnej, która utrzymuje standard w każdym touchpoincie.\n\nZaczynamy od strategii: dla kogo jesteś, za czym stoisz i jak przekłada się to na głos, język wizualny i hierarchię komunikatów. Potem projektujemy system — i produkujemy assety, które go wprowadzają na rynek.',
+        stats: [
+          { num: 'Strategy-led', label: 'identity — pozycjonowanie przed projektem wizualnym' },
+          { num: '6 tygodni', label: 'sprint fundamentowy od briefu do brand guidelines' },
+          { num: '100%', label: 'deliverables gotowych do produkcji — print i digital' },
+        ],
+      },
+      features: {
+        title: 'Co jest w zakresie',
+        items: [
+          { title: 'Warsztat pozycjonowania marki', body: 'Ustrukturyzowana sesja do zdefiniowania grupy docelowej, przestrzeni konkurencyjnej, propozycji wartości i osobowości marki.' },
+          { title: 'Architektura komunikacji', body: 'Tagline, elevator pitch, kluczowe komunikaty i wytyczne tone of voice napisane i przetestowane z Twoim zespołem.' },
+          { title: 'System tożsamości wizualnej', body: 'Zestaw logo, paleta kolorów, typografia, ikonografia i wskazówki fotograficzne w dokumencie brand guidelines.' },
+          { title: 'Produkcja assetów', body: 'Wizytówki, szablony social media, decks prezentacyjne, nagłówki e-mail i kreacje reklamowe wyprodukowane zgodnie ze spec.' },
+          { title: 'Brand guidelines', body: 'Żywy brand guide — cyfrowy i PDF — obejmujący każdy element marki z zasadami użytkowania i przykładami.' },
+          { title: 'Retainer creative direction', body: 'Miesięczny przegląd nowych kreacji, żeby brand application był spójny w miarę jak rośnie Twój zespół i kanały.' },
+        ],
+      },
+      approach: {
+        title: 'Jak wygląda współpraca',
+        steps: [
+          { num: '01', title: 'Sprint pozycjonowania', body: 'Ustrukturyzowany warsztat brandowy: krajobraz konkurencji, grupa docelowa, propozycja wartości, osobowość i głos — dostarczony jako pisemny brief.' },
+          { num: '02', title: 'Projektowanie tożsamości', body: 'Eksploracja konceptów wizualnych, projekt logo, system kolorów i typografii — recenzowany w dwóch rundach z Twoim zespołem.' },
+          { num: '03', title: 'Guidelines i assety', body: 'Dokument brand guidelines i wszystkie assety launchowe zaprojektowane i wyeksportowane w wymaganych formatach.' },
+          { num: '04', title: 'Creative direction', body: 'Miesięczny przegląd nowych kreacji, żeby brand application był spójny w różnych kanałach i formatach.' },
+        ],
+      },
+    },
   },
 };
 
 export const serviceMeta = {
   en: [
-    { slug: 'analytics-strategy', title: 'Analytics & Strategy', short: 'Strategy' },
-    { slug: 'social-media-ads',   title: 'Social Media & Ads',   short: 'Paid Social' },
-    { slug: 'seo-content',        title: 'SEO & Content',        short: 'SEO & Content' },
+    { slug: 'analytics-strategy', title: 'Analytics & Strategy',     short: 'Strategy' },
+    { slug: 'social-media-ads',   title: 'Social Media & Ads',       short: 'Paid Social' },
+    { slug: 'seo-content',        title: 'SEO & Content',             short: 'SEO & Content' },
+    { slug: 'email-crm',          title: 'Email Marketing & CRM',     short: 'Email & CRM' },
+    { slug: 'web-cro',            title: 'Web Design & CRO',          short: 'Web & CRO' },
+    { slug: 'brand-creative',     title: 'Brand Identity & Creative',  short: 'Brand & Creative' },
   ],
   pl: [
-    { slug: 'analytics-strategy', title: 'Analityka i strategia',   short: 'Strategia' },
-    { slug: 'social-media-ads',   title: 'Social Media i reklamy', short: 'Paid Social' },
-    { slug: 'seo-content',        title: 'SEO i content',           short: 'SEO i content' },
+    { slug: 'analytics-strategy', title: 'Analityka i strategia',      short: 'Strategia' },
+    { slug: 'social-media-ads',   title: 'Social Media i reklamy',     short: 'Paid Social' },
+    { slug: 'seo-content',        title: 'SEO i content',              short: 'SEO i content' },
+    { slug: 'email-crm',          title: 'E-mail Marketing i CRM',     short: 'E-mail i CRM' },
+    { slug: 'web-cro',            title: 'Web Design i CRO',           short: 'Web i CRO' },
+    { slug: 'brand-creative',     title: 'Tożsamość marki i kreacja',  short: 'Marka i kreacja' },
   ],
 };
