@@ -2,7 +2,6 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
-import nodemailer from 'nodemailer';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { existsSync } from 'fs';
@@ -31,29 +30,34 @@ const contactLimiter = rateLimit({
   message: { ok: false, error: 'Too many requests. Please try again later.' },
 });
 
-// Build the transporter once at startup
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-  connectionTimeout: 10000,
-  greetingTimeout: 10000,
-  socketTimeout: 15000,
-});
-
-// Verify SMTP on boot — log a warning if it fails but don't crash
-transporter.verify((err) => {
-  if (err) {
-    console.warn('[SMTP] Verification failed:', err.message);
-    console.warn('[SMTP] The /api/contact endpoint will return 500 until SMTP is configured.');
-  } else {
-    console.log('[SMTP] Ready to send messages.');
+// Send email via Brevo HTTP API (avoids blocked SMTP ports)
+async function sendEmail({ to, toName, subject, text, html }) {
+  const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: {
+      'api-key': process.env.BREVO_API_KEY,
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      sender: { name: 'Mare Digitale', email: process.env.MAIL_FROM_ADDR || 'office@maredigitale.com' },
+      to: [{ email: to, name: toName || to }],
+      subject,
+      textContent: text,
+      htmlContent: html,
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Brevo API ${res.status}: ${body}`);
   }
-});
+}
+
+// Log on boot whether API key is present
+if (process.env.BREVO_API_KEY) {
+  console.log('[Brevo] API key loaded — ready to send.');
+} else {
+  console.warn('[Brevo] BREVO_API_KEY is not set — /api/contact will return 500.');
+}
 
 // Validation helpers
 const isEmail = (v) => typeof v === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -73,13 +77,9 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     const phone = clean(req.body?.phone, 60);
     const message = clean(req.body?.message, 2000);
     const consent = req.body?.consent === true;
-    // Honeypot — bots fill this; humans don't see it
     const honeypot = clean(req.body?.website, 200);
 
-    if (honeypot) {
-      // Pretend success so bots don't retry
-      return res.json({ ok: true });
-    }
+    if (honeypot) return res.json({ ok: true });
     if (!name || !isEmail(email) || !message) {
       return res.status(400).json({ ok: false, error: 'Missing or invalid fields.' });
     }
@@ -99,21 +99,20 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     ].join('\n');
 
     const html = `
-      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color:#0f2c3f;">
-        <h2 style="color:#0a7a8a; border-bottom:1px solid #d8eef0; padding-bottom:8px;">New inquiry</h2>
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0f2c3f;">
+        <h2 style="color:#163322;border-bottom:1px solid #d4ead8;padding-bottom:8px;">New inquiry</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
         <p><strong>Company:</strong> ${escapeHtml(company) || '—'}</p>
         <p><strong>Phone:</strong> ${escapeHtml(phone) || '—'}</p>
         <p><strong>Message:</strong></p>
-        <p style="white-space:pre-wrap; background:#f3fbfb; padding:12px; border-left:3px solid #2fb39a;">${escapeHtml(message)}</p>
+        <p style="white-space:pre-wrap;background:#f4faf6;padding:12px;border-left:3px solid #2fb39a;">${escapeHtml(message)}</p>
       </div>
     `;
 
-    await transporter.sendMail({
-      from: process.env.MAIL_FROM,
-      to: process.env.MAIL_TO,
-      replyTo: email,
+    // Notification to the team
+    await sendEmail({
+      to: process.env.MAIL_TO || 'office@maredigitale.com',
       subject,
       text,
       html,
@@ -152,9 +151,9 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       </div>
     `;
 
-    await transporter.sendMail({
-      from: process.env.MAIL_FROM,
+    await sendEmail({
       to: email,
+      toName: name,
       subject: 'We received your message — Mare Digitale',
       text: replyText,
       html: replyHtml,
