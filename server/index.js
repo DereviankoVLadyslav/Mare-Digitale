@@ -30,33 +30,33 @@ const contactLimiter = rateLimit({
   message: { ok: false, error: 'Too many requests. Please try again later.' },
 });
 
-// Send email via Brevo HTTP API (avoids blocked SMTP ports)
+// Send email via Resend HTTP API (avoids blocked SMTP ports)
 async function sendEmail({ to, toName, subject, text, html }) {
-  const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+  const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
-      'api-key': process.env.BREVO_API_KEY,
-      'content-type': 'application/json',
+      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      sender: { name: 'Mare Digitale', email: process.env.MAIL_FROM_ADDR || 'office@maredigitale.com' },
-      to: [{ email: to, name: toName || to }],
+      from: process.env.MAIL_FROM || 'Mare Digitale <office@maredigitale.com>',
+      to: toName ? [`${toName} <${to}>`] : [to],
       subject,
-      textContent: text,
-      htmlContent: html,
+      text,
+      html,
     }),
   });
   if (!res.ok) {
     const body = await res.text();
-    throw new Error(`Brevo API ${res.status}: ${body}`);
+    throw new Error(`Resend API ${res.status}: ${body}`);
   }
 }
 
 // Log on boot whether API key is present
-if (process.env.BREVO_API_KEY) {
-  console.log('[Brevo] API key loaded — ready to send.');
+if (process.env.RESEND_API_KEY) {
+  console.log('[Resend] API key loaded — ready to send.');
 } else {
-  console.warn('[Brevo] BREVO_API_KEY is not set — /api/contact will return 500.');
+  console.warn('[Resend] RESEND_API_KEY is not set — /api/contact will return 500.');
 }
 
 // Validation helpers
