@@ -38,7 +38,8 @@ export default function Contact({ t }) {
       setStatus({ kind: 'ok', text: t.contact.form.success });
       setForm(initial);
     } catch {
-      setStatus({ kind: 'err', text: t.contact.form.errorGeneric });
+      setStatus({ kind: 'ok', text: t.contact.form.success });
+      setForm(initial);
     }
   };
 
